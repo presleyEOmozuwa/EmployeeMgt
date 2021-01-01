@@ -1,0 +1,33 @@
+@model EditRoleViewModel
+
+@{
+    ViewBag.Title = "Edit Role";
+}
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6 my-2">
+        <h5>Rubbles Technologies Inc,<br>
+            Internal Affairs
+        </h5>
+        <div class="form-group">
+            <form method="post">
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h5>Edit Role Portal</h5>
+                    </div>
+                    <div class="card-body">
+                        <label asp-for="RoleName">Role Name</label>
+                        <input class="form-control" asp-for="RoleName"/>
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" type="submit">Update</button>
+                        <a asp-action="ListRoles" asp-controller="Management" class="btn btn-primary">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>

@@ -1,0 +1,64 @@
+@model RoleModificationViewModel
+
+@{
+    ViewBag.title = "Membership";
+}
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <h5>Rubbles Technologies Inc,<br>
+            Internal Affairs
+        </h5>
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>RoleId: <h6>@Model.RoleId</h6></h5>
+            </div>
+            <div class="card-body">
+                <h5>RoleName: <h6>@Model.RoleName</h6></h5>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+        
+        <div class="card mt-5">
+            <div class="card-header">
+                <h5>List of Employees in this role</h5>
+            </div>
+            <div class="card-body">
+                @foreach (var user in Model.Users)
+                {
+                    <h6><a href="#" style="text-decoration:none">@user</a></h6>
+                }
+            </div>
+            <div class="card-footer"></div>
+        </div>
+        
+        <form method="post">
+            <div class="card mt-5">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    @for(var i = 0; i < Model.Obj.Count; i++)
+                    {
+                        <div class="form-group">
+                            <div class="form-check m-2">
+                                <input type="hidden" asp-for="@Model.Obj[i].UserId"/>
+                                <input type="hidden" asp-for="@Model.Obj[i].UserName"/>
+                    
+                                <input asp-for="@Model.Obj[i].IsSelected" class="form-check-input"/>
+                                <label class="form-check-label" asp-for="@Model.Obj[i].IsSelected">
+                                    @Model.Obj[i].UserName
+                                </label>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Update" class="btn btn-primary"/>
+                    <a asp-action="ListRoles" asp-controller="Management" class="btn btn-primary" style="width:auto">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+

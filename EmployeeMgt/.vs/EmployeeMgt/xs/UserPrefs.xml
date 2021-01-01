@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{16C7A38F-C28B-4687-8D8C-19A0FEE6FD60}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmployeeMgt/Program.cs">
+    <Files>
+      <File FileName="EmployeeMgt/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="EmployeeMgt/Startup.cs" Line="1" Column="1" />
+      <File FileName="EmployeeMgt/appsettings.json" Line="1" Column="1" />
+      <File FileName="EmployeeMgt/Program.cs" Line="18" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EmployeeMgt" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EmployeeMgt PreferredExecutionTarget="/Applications/Google Chrome 2.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

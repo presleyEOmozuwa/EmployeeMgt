@@ -1,0 +1,27 @@
+@model RoleViewModel
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6 my-3">
+        <h5>Rubbles Technologies Inc,<br>
+            Internal Affairs, role portal
+        </h5>
+        <form method="post">
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h6>Create a Role</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="RoleName">Role Name:</label>
+                        <input class="form-control" asp-for="RoleName"/>
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>

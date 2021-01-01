@@ -1,0 +1,56 @@
+@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityRole>
+
+@{
+    ViewBag.Title = "List of Roles";
+}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <h4>Rubbles Tecnologies Inc,<br>
+            Internal Staff Roles
+        </h4>
+        @if(Model.Any())
+        {
+            <a asp-action="CreateRole" asp-controller="Management" style="text-decoration:none">
+                Click here to add a role
+            </a>
+            foreach(IdentityRole role in Model)
+            {
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h6>Role Id: @role.Id</h6>
+                    </div>
+                    <div class="card-body">
+                        <h5><a asp-action="RoleUsersMembership" asp-controller="Management" asp-route-roleId="@role.Id" style="text-decoration:none">@role.Name</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <form asp-action="DeleteRole" asp-controller="Management" asp-route-Id="@role.Id">
+                            <a asp-action="EditRole" asp-controller="Management" asp-route-Id="@role.Id" class="btn btn-primary">Edit</a>
+                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                        </form>
+                    </div>    
+                </div>
+            }
+        }
+        else
+        {
+            <div class="card">
+                <div class="card-header">
+                    No role created yet
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Click the button below to add a role
+                    </h5>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="CreateRole" asp-controller="Management" class="btn btn-primary">
+                        Add a Role
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4"></div>
+</div>

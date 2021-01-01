@@ -1,0 +1,40 @@
+@model RegisterViewModel
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6 my-3">
+        <div class="form-group">
+            <form method="post">
+                <h4>Employee Application Form</h4>
+                <div>
+                    <label asp-for="FirstName">First Name</label>
+                    <input class="form-control" asp-for="FirstName"/>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="LastName">Last Name</label>
+                    <input class="form-control" asp-for="LastName"/>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Email">Email</label>
+                    <input class="form-control" asp-for="Email"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Password">Password</label>
+                    <input class="form-control" asp-for="Password"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="ConfirmPassword">Confirm Password</label>
+                    <input class="form-control" asp-for="ConfirmPassword"/>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div><br>
+                <div>
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
