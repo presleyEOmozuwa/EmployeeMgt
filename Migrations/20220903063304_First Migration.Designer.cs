@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeMgt.Migrations
 {
     [DbContext(typeof(HumanResourceContext))]
-    [Migration("20201225165041_MgtMigration")]
-    partial class MgtMigration
+    [Migration("20220903063304_First Migration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
